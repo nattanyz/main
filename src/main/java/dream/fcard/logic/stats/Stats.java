@@ -23,6 +23,7 @@ public class Stats implements Serializable {
 
     /** Constructs a new instance of Stats with no stored data. */
     public Stats() {
+        // todo: replace with logger
         System.out.println("New Stats object created");
         loginSessions = new SessionList();
         System.out.println("New loginSessions created");
@@ -31,6 +32,7 @@ public class Stats implements Serializable {
     /** Returns the Stats object pertaining to this user. */
     public static Stats getUserStats() {
         if (userStats == null) {
+            // todo: replace with logger
             System.out.println("Creating a new Stats object...");
             userStats = new Stats();
         }
@@ -39,17 +41,8 @@ public class Stats implements Serializable {
 
     /** Sets userStats to the pre-defined Stats object. */
     public static void setUserStats(Stats stats) {
+        // todo: handle null case to ensure multiplicity is not violated
         userStats = stats;
-    }
-
-    /**
-     * Creates a new Stats object from a String read from a file.
-     * @param fileText String containing info about the Stats object, read from a file.
-     * @return The new Stats object created.
-     */
-    public static Stats parseStats(String fileText) {
-        // todo: should parse Stats from file every time app is initialised. now, just create new
-        return new Stats();
     }
 
     public static void setSessionList(SessionList sessionList) {
