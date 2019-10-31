@@ -1,6 +1,11 @@
 //@@author nattanyz
 package dream.fcard.logic.stats;
 
-public class SessionListTest {
+import org.junit.jupiter.api.Test;
 
+public class SessionListTest {
+    //@Test
+    //void addSession_sessionAddedToList() {
+    //
+    //}
 }
