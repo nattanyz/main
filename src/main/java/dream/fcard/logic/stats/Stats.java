@@ -2,10 +2,12 @@
 package dream.fcard.logic.stats;
 
 import java.io.Serializable;
+import java.time.Duration;
 import java.util.ArrayList;
 
 /**
  * Represents the user's statistics.
+ * When modifying Stats, SessionList or Sessions, remember to delete "stats.txt".
  */
 public class Stats implements Serializable {
     /** The one and only instance of Stats allowed to exist. */
@@ -107,5 +109,10 @@ public class Stats implements Serializable {
     /** Gets the current session. */
     public static Session getCurrentSession() {
         return currentSession;
+    }
+
+    /** Gets the total length of time spent in sessions, as a String. */
+    public static String getTotalDurationOfSessionsAsString() {
+        return loginSessions.getTotalDurationAsString();
     }
 }

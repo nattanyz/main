@@ -21,6 +21,8 @@ public class StatisticsWindow extends VBox {
     @FXML
     private Label totalSessions;
     @FXML
+    private Label totalDuration;
+    @FXML
     private Label sessionsThisWeek;
     @FXML
     private TableView<Session> sessionsTableView;
@@ -47,6 +49,9 @@ public class StatisticsWindow extends VBox {
         int numSessions = Stats.getNumberOfLoginSessions();
         totalSessions.setText("Total sessions: " + numSessions
             + (numSessions == 1 ? " session" : " sessions"));
+
+        String duration = Stats.getTotalDurationOfSessionsAsString();
+        totalDuration.setText("Total duration: " + duration);
     }
 
     /** Creates the TableView object from the list of login sessions. */

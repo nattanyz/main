@@ -117,6 +117,13 @@ public class StatsStorageManager {
 
             System.out.println("Statistics imported from: " + statsPath);
             Stats.setSessionList(sessionList);
+        } catch (ClassCastException e) {
+            // attempting to cast SessionList object. indicates that SessionList has been modified
+            // all current data needs to be discarded. use an empty sessionList
+
+            e.printStackTrace();
+            System.out.println("Error detected with imported statistics. Starting anew...");
+            Stats.setSessionList(new SessionList());
         } catch (Exception e) {
             // temporary haxx
             e.printStackTrace();
