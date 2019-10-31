@@ -337,6 +337,7 @@ public class MultipleChoiceCard extends FrontBackCard {
 
     /**
      * Get the display choices.
+     *
      * @return the array list of choices that have already been shuffled.
      */
     public ArrayList<String> getDisplayChoices() {
@@ -345,6 +346,7 @@ public class MultipleChoiceCard extends FrontBackCard {
 
     /**
      * Get the correct answer in the shuffled array list.
+     *
      * @return the correct answer (1-based).
      */
     public int getDisplayChoicesAnswerIndex() {
@@ -353,6 +355,7 @@ public class MultipleChoiceCard extends FrontBackCard {
 
     /**
      * Get the correct answer in the original array list.
+     *
      * @return the correct answer (1-based).
      */
     public int getCorrectAnswerIndex() {
@@ -361,6 +364,7 @@ public class MultipleChoiceCard extends FrontBackCard {
 
     /**
      * Retrieve the user's attempt within the same test.
+     *
      * @return
      */
     public int getUserAttempt() {
@@ -369,6 +373,7 @@ public class MultipleChoiceCard extends FrontBackCard {
 
     /**
      * Set the user's attempt in the test.
+     *
      * @param userAttempt
      */
     public void setUserAttempt(int userAttempt) {
@@ -377,6 +382,9 @@ public class MultipleChoiceCard extends FrontBackCard {
 
     @Override
     public FlashCard duplicate() {
-        return new MultipleChoiceCard(front, back, choices);
+        String frontText = front;
+        String backText = back;
+        ArrayList<String> choiceDuplicate = generateCopyOfChoices();
+        return new MultipleChoiceCard(frontText, backText, choiceDuplicate);
     }
 }
