@@ -2,7 +2,6 @@
 package dream.fcard.logic.stats;
 
 import java.io.Serializable;
-import java.time.Duration;
 import java.util.ArrayList;
 
 /**

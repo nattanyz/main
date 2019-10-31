@@ -8,7 +8,7 @@ import java.time.format.FormatStyle;
 import java.util.function.Predicate;
 
 /**
- * Utilities related to LocalDateTime objects.
+ * Utilities related to LocalDateTime and Duration objects.
  */
 public class DateTimeUtil {
 

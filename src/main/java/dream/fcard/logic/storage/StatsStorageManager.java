@@ -49,28 +49,6 @@ public class StatsStorageManager {
         return true;
     }
 
-    /**
-     * Load the stored Stats object. Else, create a new one.
-     * @return Stats object representing user's overall statistics
-     */
-    //public static Stats getStats() {
-    //    // todo: this method is unused as of now, to be used when storage for Stats is implemented.
-    //    resolveRoot();
-    //    String path = FileReadWrite.resolve(root, statsPath);
-    //
-    //    if (!FileReadWrite.fileExists(path)) {
-    //        return new Stats();
-    //    }
-    //
-    //    try {
-    //        String fileText = FileReadWrite.read(path);
-    //        return Stats.parseStats(fileText);
-    //    } catch (FileNotFoundException e) {
-    //        System.out.println("FILE DOES NOT EXIST");
-    //    }
-    //    return null;
-    //}
-
     /** Save loginSessions in userStats to disk. */
     public static void saveLoginSessions() {
 
