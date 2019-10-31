@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InvalidClassException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
@@ -95,8 +96,8 @@ public class StatsStorageManager {
 
             System.out.println("Statistics imported from: " + statsPath);
             Stats.setSessionList(sessionList);
-        } catch (ClassCastException e) {
-            // attempting to cast SessionList object. indicates that SessionList has been modified
+        } catch (InvalidClassException e) {
+            // indicates that SessionList class has been modified
             // all current data needs to be discarded. use an empty sessionList
 
             e.printStackTrace();

@@ -9,6 +9,9 @@ import java.util.ArrayList;
  * When modifying Stats, SessionList or Sessions, remember to delete "stats.txt".
  */
 public class Stats implements Serializable {
+    // todo: make Stats an abstract class; make UserStats and DeckStats implement Stats.
+    // required methods in Stats interface: ?
+
     /** The one and only instance of Stats allowed to exist. */
     private static Stats userStats;
 

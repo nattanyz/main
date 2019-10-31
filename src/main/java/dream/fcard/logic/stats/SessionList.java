@@ -27,6 +27,14 @@ public class SessionList implements Serializable {
         this.sessionArrayList.add(session);
     }
 
+    /**
+     * Returns the number of sessions in the list.
+     * @return The number of sessions in the list.
+     */
+    public int numberOfSessions() {
+        return this.sessionArrayList.size();
+    }
+
     /** Gets the sessionArrayList contained in this SessionList. */
     public ArrayList<Session> getSessionArrayList() {
         return this.sessionArrayList;

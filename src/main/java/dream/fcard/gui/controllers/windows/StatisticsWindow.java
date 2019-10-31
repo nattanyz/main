@@ -3,6 +3,7 @@ package dream.fcard.gui.controllers.windows;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import dream.fcard.logic.stats.DeckStats;
 import dream.fcard.logic.stats.Session;
 import dream.fcard.logic.stats.Stats;
 import javafx.collections.FXCollections;
@@ -26,6 +27,8 @@ public class StatisticsWindow extends VBox {
     private Label sessionsThisWeek;
     @FXML
     private TableView<Session> sessionsTableView;
+    @FXML
+    private TableView<DeckStats> deckStatsTableView;
 
     /** Creates a new instance of StatisticsWindow. */
     public StatisticsWindow() {
@@ -79,5 +82,10 @@ public class StatisticsWindow extends VBox {
         sessionsTableView.getColumns().add(startColumn);
         sessionsTableView.getColumns().add(endColumn);
         sessionsTableView.getColumns().add(durationColumn);
+    }
+
+    /** Creates the TableView object showing DeckStats for each Deck. */
+    private void displayDeckStatsTableView() {
+        // todo
     }
 }
